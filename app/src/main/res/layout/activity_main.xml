@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:background="#fffff0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Date"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:background="@android:drawable/alert_light_frame"
+            />
+
+        <EditText
+            android:id="@+id/Price"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:background="@android:drawable/alert_light_frame"
+            />
+
+        <EditText
+            android:id="@+id/Item"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:background="@android:drawable/alert_light_frame"
+            />
+
+        <Button
+            android:id="@+id/Add"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+" />
+        <Button
+            android:id="@+id/Sub"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Date" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Price" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Item" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/historyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="#fffff0"
+        android:text="History" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TableLayout
+            android:id="@+id/tableHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <TableRow
+                android:id="@+id/firstRow"
+                android:background="#0079D6">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amount" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
